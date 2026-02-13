@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Irfan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="camera.png" alt="" />
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#our-profile">Our Profile</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#message-us">Message Us</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#our-profile" onclick="closeMenu()">Our Profile</a>
+      <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+      <a href="#message-us" onclick="closeMenu()">Message Us</a>
+    </div>
+
+    <section id="home">
+      <div class="home-image">
+        <img src="orang.png" alt="">
+      </div>
+      <h1>Hi, <span id="greeting">...</span></h1>
+      <p>Welcome to my Website</p>
+      <p class="sub-title">UI/UX Designer & Front End Developer</p>
+    </section>
+
+    <section id="our-profile">
+      <h2>Our Profile</h2>
+      <div class="photo-banner">IRFAN CREATIVE STUDIO</div>
+
+      <div class="profile-cards">
+        <div class="profile-card">
+          <h3>About the Company</h3>
+          <p>
+            Irfan Creative Studio adalah studio desain digital yang berfokus
+            pada pembuatan website dan aplikasi yang indah dan mudah digunakan.
+            Kami melayani klien dari berbagai industri di seluruh Indonesia
+            sejak 2021.
+          </p>
+        </div>
+
+        <div class="profile-card">
+          <h3>Vision &amp; Mission</h3>
+          <p>
+            <strong>Visi:</strong> Menjadi studio desain terdepan di Indonesia.
+          </p>
+          <br />
+          <p><strong>Misi:</strong></p>
+          <ul>
+            <li>Memberikan desain UI/UX berkualitas tinggi</li>
+            <li>Membangun website yang responsif dan cepat</li>
+            <li>Bekerja sama erat dengan klien di setiap tahap</li>
+            <li>Terus belajar teknologi dan tren terbaru</li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-section">
+        <h3>Meet the Team</h3>
+        <div class="team-cards">
+          <div class="team-card">
+            <div class="avatar">I</div>
+            <h4>Irfan</h4>
+            <p>UI/UX Designer & FE Dev</p>
+            <p>23 tahun</p>
+          </div>
+          <div class="team-card">
+            <div class="avatar">R</div>
+            <h4>Rizal</h4>
+            <p>Graphic Designer</p>
+            <p>22 tahun</p>
+          </div>
+          <div class="team-card">
+            <div class="avatar">A</div>
+            <h4>Aisha</h4>
+            <p>Project Manager</p>
+            <p>25 tahun</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-thumb">
+            <img src="ecommerce.jpg" alt="">
+          </div>
+          <div class="portfolio-info">
+            <h4>E-Commerce Website</h4>
+            <p>Redesain toko online dengan tampilan modern.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-thumb">
+            <img src="banking.png" alt="">
+          </div>
+          <div class="portfolio-info">
+            <h4>Mobile Banking App</h4>
+            <p>Desain aplikasi perbankan yang intuitif.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-thumb">
+            <img src="programmin.jpg" alt="">
+          </div>
+          <div class="portfolio-info">
+            <h4>Company Profile</h4>
+            <p>Website company profile yang responsif.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="message-us">
+      <h2>Message Us</h2>
+
+      <form id="contactForm">
+        <div class="form-group" id="fg-nama">
+          <label for="inputNama">Nama</label>
+          <input
+            type="text"
+            id="inputNama"
+            placeholder="Masukkan nama lengkap"
+          />
+          <div class="error-msg">Nama tidak boleh kosong.</div>
+        </div>
+
+        <div class="form-group" id="fg-email">
+          <label for="inputEmail">Email</label>
+          <input type="email" id="inputEmail" placeholder="contoh@email.com" />
+          <div class="error-msg">Masukkan email yang valid.</div>
+        </div>
+        <div class="form-group" id="fg-tgl">
+          <label for="inputTgl">Tanggal Lahir</label>
+          <input type="date" id="inputTgl" />
+          <div class="error-msg">Tanggal lahir harus diisi.</div>
+        </div>
+        <div class="form-group" id="fg-gender">
+          <label>Jenis Kelamin</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="gender" value="Laki-laki" /> Laki-laki
+            </label>
+            <label>
+              <input type="radio" name="gender" value="Perempuan" /> Perempuan
+            </label>
+          </div>
+          <div class="error-msg" id="errGender">Pilih jenis kelamin.</div>
+        </div>
+        <div class="form-group" id="fg-pesan">
+          <label for="inputPesan">Pesan</label>
+          <textarea
+            id="inputPesan"
+            placeholder="Tulis pesanmu di sini..."
+          ></textarea>
+          <div class="error-msg">Pesan minimal 10 karakter.</div>
+        </div>
+
+        <button type="submit" class="btn-submit">Kirim Pesan</button>
+      </form>
+
+      <div id="result-box">
+        <h3>Pesan berhasil dikirim!</h3>
+        <div id="result-content"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Irfan Creative Studio — Surabaya, Indonesia</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
